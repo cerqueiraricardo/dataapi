@@ -1,0 +1,31 @@
+{
+  "name": "dataapi",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Small description for dataapi goes here",
+  "repository": "",
+  "license": "MIT",
+  "author": "",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "",
+    "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:css:fix": "concurrently \"npm:lint:css -- --fix\"",
+    "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\"",
+    "lint:hbs": "",
+    "lint:hbs:fix": "",
+    "lint:js": "eslint . --cache",
+    "lint:js:fix": "eslint . --fix",
+    "start": "",
+    "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\""
+  },
+  "devDependencies": {
+  },
+  "engines": {
+    "node": "16.* || >= 18"
+  }
+}
